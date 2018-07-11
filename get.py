@@ -12,7 +12,7 @@ if len(argv) != 2:
 
 script_name, url = argv
 
-if url[:3] != 'http':
+if url[:4] != 'http':
   url = 'http://' + url
 
 r = requests.get(url)
