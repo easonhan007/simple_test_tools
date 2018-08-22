@@ -1,0 +1,18 @@
+
+{
+    "/users": {
+        "method": "get",
+        "response": {
+            "length": "10",
+            "content": "first_name:first_name;last_name:last_name;phone_number:phone_number;job:job"
+        }
+    },
+
+    "/post": {
+        "method": "get",
+        "response": {
+            "length": "1",
+            "content": "title:sentence;content:text;created_at:iso8601"
+        }
+    }
+}
