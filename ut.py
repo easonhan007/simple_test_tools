@@ -34,7 +34,7 @@ for case in sorted([method for method in dir(TestStringMethods) if method.starts
     custom_order_suite.addTest(TestStringMethods(case))
 
 
-# unittest.TextTestRunner(verbosity=2).run(common_suite)
-# unittest.TextTestRunner(verbosity=2).run(one_case_suite)
-# unittest.TextTestRunner(verbosity=2).run(only_run_important_suite)
+unittest.TextTestRunner(verbosity=2).run(common_suite)
+unittest.TextTestRunner(verbosity=2).run(one_case_suite)
+unittest.TextTestRunner(verbosity=2).run(only_run_important_suite)
 unittest.TextTestRunner(verbosity=2).run(custom_order_suite)
