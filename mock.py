@@ -1,5 +1,10 @@
 # support all faker methods
 # https://faker.readthedocs.io/en/master/locales/zh_CN.html
+# USAGE: 
+# export FLASK_APP=mock.py flask run
+# windows: set FLASK_APP=mock.py flask run
+
+
 
 from flask import Flask, jsonify, request
 from faker import Faker
