@@ -55,18 +55,19 @@ def products(product):
 def insert_products(num):
     values = []
     i = 0
+    size = 100
     while i < int(num):
         i += 1
         productCode = ''.join(random.choices(
-            string.ascii_letters + string.digits, k=10240))
+            string.ascii_letters + string.digits, k=size))
         productName = ''.join(random.choices(
-            string.ascii_letters + string.digits, k=10240))
+            string.ascii_letters + string.digits, k=size))
         productLine = ''.join(random.choices(
-            string.ascii_letters + string.digits, k=10240))
+            string.ascii_letters + string.digits, k=size))
         productScale = ''.join(random.choices(
-            string.ascii_letters + string.digits, k=10240))
+            string.ascii_letters + string.digits, k=size))
         productVendor = ''.join(random.choices(
-            string.ascii_letters + string.digits, k=10240))
+            string.ascii_letters + string.digits, k=size))
         productDescription = ''.join(random.sample(
             string.ascii_letters + string.digits, 8))
         quantityInStock = random.randint(1, 1000)
