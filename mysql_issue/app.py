@@ -61,7 +61,7 @@ def insert_products(num):
         productCode = ''.join(random.choices(
             string.ascii_letters + string.digits, k=size))
         productName = ''.join(random.choices(
-            string.ascii_letters + string.digits, k=size))
+            string.ascii_letters + string.digits, k=size * 1024))
         productLine = ''.join(random.choices(
             string.ascii_letters + string.digits, k=size))
         productScale = ''.join(random.choices(
