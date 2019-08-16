@@ -56,12 +56,13 @@ def insert_products(num):
     values = []
     i = 0
     size = 100
+    big_size = 10240
     while i < int(num):
         i += 1
         productCode = ''.join(random.choices(
             string.ascii_letters + string.digits, k=size))
         productName = ''.join(random.choices(
-            string.ascii_letters + string.digits, k=size * 1024))
+            string.ascii_letters + string.digits, k=big_size))
         productLine = ''.join(random.choices(
             string.ascii_letters + string.digits, k=size))
         productScale = ''.join(random.choices(
