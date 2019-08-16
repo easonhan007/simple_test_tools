@@ -3,7 +3,7 @@ USE `test`;
 
 DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `productCode` text NOT NULL DEFAULT '' COMMENT '产品代码',
   `productName` text NOT NULL COMMENT '产品名称',
   `productLine` text NOT NULL COMMENT '产品线',

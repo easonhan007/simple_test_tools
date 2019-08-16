@@ -35,13 +35,15 @@ def insert_products(num):
         buyPrice = random.uniform(1.0, 10000.0)
         MSRP = random.uniform(10.0, 20000.0)
 
-        value = (i, productCode, productName, productLine, productScale,
+        # value = (i, productCode, productName, productLine, productScale,
+        #          productVendor, productDescription, quantityInStock, buyPrice, MSRP)
+        value = (productCode, productName, productLine, productScale,
                  productVendor, productDescription, quantityInStock, buyPrice, MSRP)
         values.append(value)
 
     db = pymysql.connect(**config)
     cursor = db.cursor()
-    sql = "INSERT INTO products (id, productCode, productName, productLine, productScale, productVendor, productDescription, quantityInStock, buyPrice, MSRP) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO products (productCode, productName, productLine, productScale, productVendor, productDescription, quantityInStock, buyPrice, MSRP) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     print(sql)
     cursor.executemany(sql, values)
     db.commit()
