@@ -1,3 +1,4 @@
 requests
 Faker
 Flask
+redis
